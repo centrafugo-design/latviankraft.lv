@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Latvian Kraft</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: linear-gradient(180deg, #0f1a14, #1b2a20);
+      color: #e6e6e6;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.4em;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .lang-switch {
+      margin: 30px 0 40px;
+    }
+
+    .lang-switch button {
+      background: none;
+      border: 1px solid #6f8f7a;
+      color: #e6e6e6;
+      padding: 6px 14px;
+      margin: 0 5px;
+      cursor: pointer;
+      font-size: 0.9em;
+      letter-spacing: 1px;
+    }
+
+    .lang-switch button.active {
+      background-color: #6f8f7a;
+      color: #0f1a14;
+    }
+
+    .text {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .divider {
+      margin: 50px auto;
+      width: 60px;
+      border-top: 1px solid #6f8f7a;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 50px 0;
+      border-radius: 2px;
+    }
+
+    .contacts {
+      margin-top: 40px;
+      font-size: 0.95em;
+    }
+
+    a {
+      color: #cfe6d8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Latvian Kraft</h1>
+
+    <!-- LANGUAGE SWITCH -->
+    <div class="lang-switch">
+      <button id="lvBtn" class="active" onclick="showLV()">LV</button>
+      <button id="enBtn" onclick="showEN()">EN</button>
+    </div>
+
+    <!-- LATVIAN -->
+    <div id="lv" class="text">
+      <p>
+        <strong>Latvian Kraft</strong> ir neliela amatnieciska darbnīca, kurā tiek saglabāta un turpināta tradicionālā
+        Latvijas gaļas kūpināšanas prasme. Mūsu produkti top, izmantojot
+        <strong>auksto kūpināšanu dūmos</strong>, ļaujot laikam, dūmiem un koksnei
+        darīt savu darbu bez steigas.
+      </p>
+
+      <p>
+        Kūpināšanā izmantojam <strong>lapkoku malku un skujkoku zariņus</strong>,
+        kas piešķir produktam dziļu, piesātinātu aromātu un izteiktu raksturu.
+        Rezultāts ir bagātīga, nobriedusi garša — ar skaidru Latvijas dabas un meža noskaņu.
+      </p>
+
+      <p>
+        Mēs ticam vienkāršībai, izejvielu kvalitātei un procesam, kurā tradīcija nav
+        tikai vārds, bet darbs un pacietība.
+      </p>
+    </div>
+
+    <!-- ENGLISH -->
+    <div id="en" class="text" style="display:none;">
+      <p>
+        <strong>Latvian Kraft</strong> is a small artisanal workshop dedicated to preserving and continuing traditional
+        Latvian meat smoking techniques. Our products are created using
+        <strong>cold smoke curing</strong>, allowing time, smoke, and wood to shape the flavour naturally.
+      </p>
+
+      <p>
+        We use <strong>hardwood firewood and conifer branches</strong> in the smoking process,
+        giving the meat a deep, rich aroma and distinctive character.
+        The result is a mature flavour with a clear sense of Latvia’s forests and nature.
+      </p>
+
+      <p>
+        We believe in simplicity, quality ingredients, and a process where tradition is not just a word,
+        but a craft built on patience and care.
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- IMAGE -->
+    <img src="image.jpg" alt="Cold smoked meat – Latvian Kraft">
+
+    <!-- CONTACTS -->
+    <div class="contacts">
+      <p>
+        📞 <a href="tel:+37126987327">+371 26 987 327</a><br>
+        🔗 <a href="https://facebook.com/kupinatavas.kupinajumi" target="_blank">
+          facebook.com/kupinatavas.kupinajumi
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showLV() {
+      document.getElementById("lv").style.display = "block";
+      document.getElementById("en").style.display = "none";
+      document.getElementById("lvBtn").classList.add("active");
+      document.getElementById("enBtn").classList.remove("active");
+      document.documentElement.lang = "lv";
+    }
+
+    function showEN() {
+      document.getElementById("lv").style.display = "none";
+      document.getElementById("en").style.display = "block";
+      document.getElementById("enBtn").classList.add("active");
+      document.getElementById("lvBtn").classList.remove("active");
+      document.documentElement.lang = "en";
+    }
+  </script>
+</body>
+</html>
