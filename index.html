@@ -14,6 +14,7 @@
       color: #e9efe9;
       line-height: 1.8;
       overflow-x: hidden;
+      position: relative;
       animation: fadeIn 2s ease-out;
     }
 
@@ -22,7 +23,7 @@
       to { opacity: 1; }
     }
 
-    /* Smoke drift */
+    /* Smoke drift fons */
     .smoke {
       position: fixed;
       top: -20%;
@@ -35,7 +36,7 @@
         radial-gradient(circle at 50% 80%, rgba(255,255,255,0.02), transparent 55%);
       animation: smokeDrift 80s linear infinite;
       pointer-events: none;
-      z-index: 0;
+      z-index: -1; /* lai nebloķē tekstu */
     }
 
     @keyframes smokeDrift {
@@ -65,31 +66,6 @@
       text-transform: uppercase;
       color: #9fc8b2;
       margin-bottom: 45px;
-    }
-
-    .lang-switch {
-      margin-bottom: 55px;
-    }
-
-    .lang-switch button {
-      background: none;
-      border: 1px solid #4f7a63;
-      color: #cfe6d8;
-      padding: 7px 18px;
-      margin: 0 6px;
-      cursor: pointer;
-      font-size: 0.95em;
-      letter-spacing: 1.2px;
-      transition: all 0.2s ease;
-    }
-
-    .lang-switch button.active {
-      background-color: #4f7a63;
-      color: #0e1411;
-    }
-
-    .lang-switch button:hover {
-      border-color: #6fa88a;
     }
 
     .text {
@@ -130,5 +106,52 @@
     }
 
     a:hover {
-      text-decora
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="smoke"></div>
+
+  <div class="container">
+    <h1>Latvian Kraft</h1>
+    <div class="subtitle">Auksti kūpināta gaļa no Latvijas</div>
+
+    <div class="text">
+      <p>
+        <strong>Latvian Kraft</strong> ir neliela amatnieciska darbnīca, kurā tiek saglabāta un turpināta tradicionālā
+        Latvijas gaļas kūpināšanas prasme. Mūsu produkti top, izmantojot
+        <strong>auksto kūpināšanu dūmos</strong>, ļaujot laikam, dūmiem un koksnei
+        darīt savu darbu bez steigas.
+      </p>
+
+      <p>
+        Kūpināšanā izmantojam <strong>lapkoku malku un skujkoku zariņus</strong>,
+        kas piešķir produktam dziļu, piesātinātu aromātu un izteiktu raksturu.
+        Rezultāts ir bagātīga, nobriedusi garša — ar skaidru Latvijas dabas un meža noskaņu.
+      </p>
+
+      <p>
+        Mēs ticam vienkāršībai, izejvielu kvalitātei un procesam, kurā tradīcija nav
+        tikai vārds, bet darbs un pacietība.
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <img src="https://via.placeholder.com/800x400?text=Latvian+Kraft" alt="Cold smoked meat – Latvian Kraft">
+
+    <div class="contacts">
+      <p>
+        📞 <a href="tel:+37126987327">+371 26 987 327</a><br>
+        🔗 <a href="https://facebook.com/kupinatavas.kupinajumi" target="_blank">
+          facebook.com/kupinatavas.kupinajumi
+        </a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
+
 
