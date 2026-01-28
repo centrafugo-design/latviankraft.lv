@@ -10,12 +10,10 @@
       margin: 0;
       padding: 0;
       font-family: Georgia, "Times New Roman", serif;
-      background:
-        radial-gradient(circle at 30% 20%, rgba(255,255,255,0.03), transparent 40%),
-        radial-gradient(circle at 70% 80%, rgba(255,255,255,0.02), transparent 45%),
-        linear-gradient(180deg, #0e1411, #1a231e);
+      background: linear-gradient(180deg, #0e1411, #1a231e);
       color: #e9efe9;
       line-height: 1.8;
+      overflow-x: hidden;
       animation: fadeIn 2s ease-out;
     }
 
@@ -24,7 +22,30 @@
       to { opacity: 1; }
     }
 
+    /* Smoke drift */
+    .smoke {
+      position: fixed;
+      top: -20%;
+      left: -20%;
+      width: 140%;
+      height: 140%;
+      background:
+        radial-gradient(circle at 30% 40%, rgba(255,255,255,0.035), transparent 45%),
+        radial-gradient(circle at 70% 60%, rgba(255,255,255,0.03), transparent 50%),
+        radial-gradient(circle at 50% 80%, rgba(255,255,255,0.02), transparent 55%);
+      animation: smokeDrift 80s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes smokeDrift {
+      from { transform: translate(0, 0); }
+      to { transform: translate(6%, -6%); }
+    }
+
     .container {
+      position: relative;
+      z-index: 1;
       max-width: 960px;
       margin: 0 auto;
       padding: 70px 22px;
@@ -109,92 +130,5 @@
     }
 
     a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
+      text-decora
 
-<body>
-  <div class="container">
-    <h1>Latvian Kraft</h1>
-    <div class="subtitle">Cold Smoked Craft from Latvia</div>
-
-    <div class="lang-switch">
-      <button id="lvBtn" class="active" onclick="showLV()">LV</button>
-      <button id="enBtn" onclick="showEN()">EN</button>
-    </div>
-
-    <!-- LATVIAN -->
-    <div id="lv" class="text">
-      <p>
-        <strong>Latvian Kraft</strong> ir neliela amatnieciska darbnīca, kurā tiek saglabāta un turpināta tradicionālā
-        Latvijas gaļas kūpināšanas prasme. Mūsu produkti top, izmantojot
-        <strong>auksto kūpināšanu dūmos</strong>, ļaujot laikam, dūmiem un koksnei
-        darīt savu darbu bez steigas.
-      </p>
-
-      <p>
-        Kūpināšanā izmantojam <strong>lapkoku malku un skujkoku zariņus</strong>,
-        kas piešķir produktam dziļu, piesātinātu aromātu un izteiktu raksturu.
-        Rezultāts ir bagātīga, nobriedusi garša — ar skaidru Latvijas dabas un meža noskaņu.
-      </p>
-
-      <p>
-        Mēs ticam vienkāršībai, izejvielu kvalitātei un procesam, kurā tradīcija nav
-        tikai vārds, bet darbs un pacietība.
-      </p>
-    </div>
-
-    <!-- ENGLISH -->
-    <div id="en" class="text" style="display:none;">
-      <p>
-        <strong>Latvian Kraft</strong> is a small artisanal workshop dedicated to preserving and continuing traditional
-        Latvian meat smoking techniques. Our products are created using
-        <strong>cold smoke curing</strong>, allowing time, smoke, and wood to shape the flavour naturally.
-      </p>
-
-      <p>
-        We use <strong>hardwood firewood and conifer branches</strong> in the smoking process,
-        giving the meat a deep, rich aroma and distinctive character.
-        The result is a mature flavour with a clear sense of Latvia’s forests and nature.
-      </p>
-
-      <p>
-        We believe in simplicity, quality ingredients, and a process where tradition is not just a word,
-        but a craft built on patience and care.
-      </p>
-    </div>
-
-    <div class="divider"></div>
-
-    <img src="image.jpg" alt="Cold smoked meat – Latvian Kraft">
-
-    <div class="contacts">
-      <p>
-        📞 <a href="tel:+37126987327">+371 26 987 327</a><br>
-        🔗 <a href="https://facebook.com/kupinatavas.kupinajumi" target="_blank">
-          facebook.com/kupinatavas.kupinajumi
-        </a>
-      </p>
-    </div>
-  </div>
-
-  <script>
-    function showLV() {
-      document.getElementById("lv").style.display = "block";
-      document.getElementById("en").style.display = "none";
-      document.getElementById("lvBtn").classList.add("active");
-      document.getElementById("enBtn").classList.remove("active");
-      document.documentElement.lang = "lv";
-    }
-
-    function showEN() {
-      document.getElementById("lv").style.display = "none";
-      document.getElementById("en").style.display = "block";
-      document.getElementById("enBtn").classList.add("active");
-      document.getElementById("lvBtn").classList.remove("active");
-      document.documentElement.lang = "en";
-    }
-  </script>
-</body>
-</html>
