@@ -51,7 +51,17 @@ h1 { font-size:3em; letter-spacing:4px; margin-bottom:10px; color:#d8efe0; }
 .text { max-width:820px; margin:0 auto; text-align:left; font-size:1.15em; }
 .text strong { color:#bfe5c8; font-weight:normal; }
 .divider { margin:65px auto; width:80px; border-top:1px solid #4f7a63; }
-img { max-width:100%; height:auto; margin:60px 0; border-radius:3px; opacity:0.95; }
+
+/* Bildes stils - centrēta un responsīva */
+.responsive-img {
+  display: block;
+  margin: 40px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+  opacity: 0.95;
+}
+
 .contacts { margin-top:50px; font-size:1em; color:#cfe6d8; }
 a { color:#bfe5c8; text-decoration:none; }
 a:hover { text-decoration:underline; }
@@ -86,7 +96,8 @@ a:hover { text-decoration:underline; }
 
 <div class="divider"></div>
 
-<img src="kupinats.jpg" alt="Latvijas auksti kūpināta gaļa – Latvian Kraft">
+<!-- Centrēta, responsīva bilde -->
+<img class="responsive-img" src="kupinats.jpg" alt="Latvijas auksti kūpināta gaļa – Latvian Kraft">
 
 <div class="contacts">
 <p>📞 <a href="tel:+37126987327">+371 26 987 327</a><br>
