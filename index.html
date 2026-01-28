@@ -10,70 +10,78 @@
       margin: 0;
       padding: 0;
       font-family: Georgia, "Times New Roman", serif;
-      background: linear-gradient(180deg, #0f1a14, #1b2a20);
-      color: #e6e6e6;
-      line-height: 1.7;
+      background: linear-gradient(180deg, #0f1512, #1a221d);
+      color: #e9efe9;
+      line-height: 1.8;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 950px;
       margin: 0 auto;
-      padding: 50px 20px;
+      padding: 60px 22px;
       text-align: center;
     }
 
     h1 {
-      font-size: 2.4em;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
+      font-size: 2.8em;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+      color: #d7efe0;
     }
 
     .lang-switch {
-      margin: 30px 0 40px;
+      margin: 35px 0 50px;
     }
 
     .lang-switch button {
       background: none;
-      border: 1px solid #6f8f7a;
-      color: #e6e6e6;
-      padding: 6px 14px;
-      margin: 0 5px;
+      border: 1px solid #4f7a63;
+      color: #d7efe0;
+      padding: 7px 16px;
+      margin: 0 6px;
       cursor: pointer;
-      font-size: 0.9em;
-      letter-spacing: 1px;
+      font-size: 0.95em;
+      letter-spacing: 1.2px;
     }
 
     .lang-switch button.active {
-      background-color: #6f8f7a;
-      color: #0f1a14;
+      background-color: #4f7a63;
+      color: #0f1512;
     }
 
     .text {
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
       text-align: left;
+      font-size: 1.12em;
+    }
+
+    .text strong {
+      color: #bfe5c8;
+      font-weight: normal;
     }
 
     .divider {
-      margin: 50px auto;
-      width: 60px;
-      border-top: 1px solid #6f8f7a;
+      margin: 55px auto;
+      width: 70px;
+      border-top: 1px solid #4f7a63;
     }
 
     img {
       max-width: 100%;
       height: auto;
-      margin: 50px 0;
-      border-radius: 2px;
+      margin: 55px 0;
+      border-radius: 3px;
     }
 
     .contacts {
-      margin-top: 40px;
-      font-size: 0.95em;
+      margin-top: 45px;
+      font-size: 1em;
+      color: #cfe6d8;
     }
 
     a {
-      color: #cfe6d8;
+      color: #bfe5c8;
       text-decoration: none;
     }
 
@@ -87,7 +95,6 @@
   <div class="container">
     <h1>Latvian Kraft</h1>
 
-    <!-- LANGUAGE SWITCH -->
     <div class="lang-switch">
       <button id="lvBtn" class="active" onclick="showLV()">LV</button>
       <button id="enBtn" onclick="showEN()">EN</button>
@@ -136,10 +143,8 @@
 
     <div class="divider"></div>
 
-    <!-- IMAGE -->
     <img src="image.jpg" alt="Cold smoked meat – Latvian Kraft">
 
-    <!-- CONTACTS -->
     <div class="contacts">
       <p>
         📞 <a href="tel:+37126987327">+371 26 987 327</a><br>
